@@ -1,3 +1,4 @@
+package repositorios;
 public class ElementoNaoExisteException extends Exception {
 
 	private static final long serialVersionUID = -7096022758377417172L;

@@ -1,3 +1,4 @@
+package repositorios;
 
 public class ElementoJaExisteException extends Exception {
 

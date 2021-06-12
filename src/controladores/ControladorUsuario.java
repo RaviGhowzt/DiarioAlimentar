@@ -1,4 +1,11 @@
+package controladores;
 import java.util.ArrayList;
+import java.util.List;
+
+import beans.Usuario;
+import repositorios.ElementoJaExisteException;
+import repositorios.ElementoNaoExisteException;
+import repositorios.RepositorioUsuario;
 
 
 
@@ -16,13 +23,13 @@ public class ControladorUsuario {
 	}
 	
 	public void removeUsuario(Usuario usuario) throws ElementoNaoExisteException {
-		this.repoUsuario.remove(usuario);
+		this.repoUsuario.delete(usuario);
 	}
 	
 	public void updateUsuario(Usuario usuario) throws ElementoNaoExisteException {
 		this.repoUsuario.update(usuario);
 	}
-	public ArrayList<Usuario> listarUsuario(){
-		return this.repoUsuario.listar();
+	public List<Usuario> listarUsuario(){
+		return this.repoUsuario.recover();
 	}
 }

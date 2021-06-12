@@ -1,4 +1,13 @@
+package controladores;
+
+
 import java.util.ArrayList;
+import java.util.List;
+
+import beans.Alimento;
+import repositorios.ElementoJaExisteException;
+import repositorios.ElementoNaoExisteException;
+import repositorios.RepositorioAlimento;
 
 public class ControladorAlimento {
 	private RepositorioAlimento repoAlimento;
@@ -13,14 +22,14 @@ public class ControladorAlimento {
 	}
 	
 	public void removeUsuario(Alimento alimento) throws ElementoNaoExisteException {
-		this.repoAlimento.remove(alimento);
+		this.repoAlimento.delete(alimento);
 	}
 	
 	public void updateUsuario(Alimento alimento) throws ElementoNaoExisteException {
 		this.repoAlimento.update(alimento);
 	}
-	public ArrayList<Alimento> listarAlimento(){
-		return this.repoAlimento.listar();
+	public List<Alimento> listarAlimento(){
+		return this.repoAlimento.recover();
 	}
 
 }
