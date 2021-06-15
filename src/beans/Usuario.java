@@ -3,21 +3,19 @@ package beans;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Usuario {
+public abstract class Usuario {
 	
 	private String nome;
 	private String email;
-	private double peso;
-	private double altura;
+	private String senha;
 	private LocalDate dataNascimento;
 	
-	public Usuario(String nome, String email, double peso, double altura, LocalDate dataNascimento) {
+	public Usuario(String nome, String email,String senha,LocalDate dataNascimento) {
 		super();
 		this.nome = nome;
 		this.email = email;
-		this.peso = peso;
-		this.altura = altura;
 		this.dataNascimento = dataNascimento;
+		this.senha = senha;
 	}
 	
 	public int calcularIdade () {
@@ -41,20 +39,12 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public double getPeso() {
-		return peso;
+	public String getSenha() {
+		return senha;
 	}
 
-	public void setPeso(double peso) {
-		this.peso = peso;
-	}
-
-	public double getAltura() {
-		return altura;
-	}
-
-	public void setAltura(double altura) {
-		this.altura = altura;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	public LocalDate getDataNascimento() {
@@ -69,14 +59,10 @@ public class Usuario {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		long temp;
-		temp = Double.doubleToLongBits(altura);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		temp = Double.doubleToLongBits(peso);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((senha == null) ? 0 : senha.hashCode());
 		return result;
 	}
 
@@ -89,8 +75,6 @@ public class Usuario {
 		if (getClass() != obj.getClass())
 			return false;
 		Usuario other = (Usuario) obj;
-		if (Double.doubleToLongBits(altura) != Double.doubleToLongBits(other.altura))
-			return false;
 		if (dataNascimento == null) {
 			if (other.dataNascimento != null)
 				return false;
@@ -106,13 +90,14 @@ public class Usuario {
 				return false;
 		} else if (!nome.equals(other.nome))
 			return false;
-		if (Double.doubleToLongBits(peso) != Double.doubleToLongBits(other.peso))
+		if (senha == null) {
+			if (other.senha != null)
+				return false;
+		} else if (!senha.equals(other.senha))
 			return false;
 		return true;
 	}
-	
-	
-	
-	
+
+
 
 }
