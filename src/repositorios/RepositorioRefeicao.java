@@ -3,12 +3,10 @@ import java.util.ArrayList;
 
 import beans.Refeicao;
 
-public class RepositorioRefeicao extends RepositorioGenerico{
-	private ArrayList<Refeicao> refeicoes;
+public class RepositorioRefeicao extends RepositorioGenerico<Refeicao>{
 
 	public RepositorioRefeicao() {
 		super();
-		this.refeicoes = new ArrayList<Refeicao>();
 	}
 	
 }

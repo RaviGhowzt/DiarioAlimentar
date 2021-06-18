@@ -3,12 +3,10 @@ import java.util.ArrayList;
 
 import beans.Alimento;
 
-public class RepositorioAlimento extends RepositorioGenerico {
-	private ArrayList<Alimento> alimentos;
+public class RepositorioAlimento extends RepositorioGenerico<Alimento> {
 
 	public RepositorioAlimento() {
 		super();
-		this.alimentos = new ArrayList<Alimento>();
 	}
 	
 }
