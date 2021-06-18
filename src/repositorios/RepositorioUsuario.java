@@ -3,12 +3,10 @@ import java.util.ArrayList;
 
 import beans.Usuario;
 
-public class RepositorioUsuario extends RepositorioGenerico{
-	private ArrayList<Usuario> usuarios;
+public class RepositorioUsuario extends RepositorioGenerico<Usuario>{;
 
 	public RepositorioUsuario() {
 		super();
-		this.usuarios = new ArrayList<Usuario>();
 	}
 	
 }
