@@ -1,25 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.gui.CadastroController">
    <top>
-      <Label text="CADASTRO" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-   </top>
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="630.0" prefWidth="850.0" BorderPane.alignment="CENTER">
          <children>
-            <ComboBox layoutX="51.0" layoutY="14.0" prefWidth="150.0" promptText="Tipo de usuário" />
+            <CheckBox fx:id="cbCliente" layoutX="190.0" layoutY="221.0" mnemonicParsing="false" text="Cliente">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cbNutricionista" layoutX="514.0" layoutY="222.0" mnemonicParsing="false" text="Nutricionista">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="txtEmailC" layoutX="190.0" layoutY="299.0" promptText="email" />
+            <TextField fx:id="txtNomeC" layoutX="190.0" layoutY="267.0" promptText="nome" />
+            <TextField fx:id="txtPesoC" layoutX="190.0" layoutY="366.0" promptText="peso" />
+            <TextField fx:id="txtAlturaC" layoutX="190.0" layoutY="400.0" promptText="altura" />
+            <TextField fx:id="txtNomeN" layoutX="514.0" layoutY="268.0" promptText="nome" />
+            <PasswordField fx:id="txtEmailN" layoutX="515.0" layoutY="298.0" prefHeight="25.0" prefWidth="149.0" promptText="email" />
+            <TextField fx:id="txtSenhaN" layoutX="515.0" layoutY="367.0" promptText="CRN" />
+            <TextField fx:id="txtDataNascimentoN" layoutX="514.0" layoutY="401.0" promptText="data de nascimento" />
+            <PasswordField fx:id="txtSenhaN" layoutX="515.0" layoutY="334.0" promptText="senha" />
+            <PasswordField fx:id="txtSenhaC" layoutX="190.0" layoutY="333.0" promptText="senha" />
+            <TextField fx:id="txtDataNascimentoC" layoutX="190.0" layoutY="436.0" promptText="data de nascimento" />
+            <Button fx:id="btnConcluir" layoutX="634.0" layoutY="572.0" mnemonicParsing="false" text="Concluir" />
+            <Label fx:id="lbCadastro" layoutX="389.0" layoutY="47.0" text="CADASTRO">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-   </center>
+   </top>
 </BorderPane>

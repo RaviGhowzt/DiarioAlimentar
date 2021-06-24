@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.stage.Stage;
+import gui.ScreenManager;
 
 public class DiarioAlimentarApp extends Application {
 
@@ -8,8 +9,9 @@ public class DiarioAlimentarApp extends Application {
 	
 	@Override 
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setScene(ScreenManager.getInstance().getMainScene());
-        primaryStage.setTitle("Diário Alimentar");
+        //primaryStage.setScene(ScreenManager.getInstance().get);
+        primaryStage.setScene(ScreenManager.getInstance().getCadastro());
+		primaryStage.setTitle("Diário Alimentar");
         
         primaryStage.setWidth(850);
         primaryStage.setHeight(680);
