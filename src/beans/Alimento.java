@@ -22,6 +22,10 @@ public class Alimento {
 		this.idref = idref;
 		this.idusuario = idusuario;
 	}
+	
+	public Alimento() {
+		
+	}
 
 	public int getPeso() {
 		return peso;

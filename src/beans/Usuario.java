@@ -18,6 +18,10 @@ public abstract class Usuario {
 		this.senha = senha;
 	}
 	
+	public Usuario() {
+		
+	}
+	
 	public int calcularIdade () {
 		return Period.between(dataNascimento, LocalDate.now()).getYears();
 		
