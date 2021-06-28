@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 public abstract class RepositorioGenerico<T> {
     
     protected List<T> elements;
     
     public RepositorioGenerico() {
-        this.elements = new ArrayList<>();
+        this.elements = new ArrayList<T>();
     }
     
     public void create(T newObj) {

@@ -10,6 +10,10 @@ public class Nutricionista extends Usuario {
 		super(nome, email, senha, dataNascimento);
 		this.CRN = CRN;
 	}
+	
+	public Nutricionista() {
+		
+	}
 
 	public int getCRN() {
 		return CRN;
