@@ -4,14 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Classe de exemplo para criação de repositório abstrato com CRUD.
- * Implementação feita com ArrayList.
- * 
- * @author Leandro M. Nascimento
- *
- * @param <T>
- */
 public abstract class RepositorioGenerico<T> {
     
     protected List<T> elements;

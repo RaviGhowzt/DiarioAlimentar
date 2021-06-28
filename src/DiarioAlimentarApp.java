@@ -5,12 +5,9 @@ import gui.ScreenManager;
 public class DiarioAlimentarApp extends Application {
 
 	
-	
-	
 	@Override 
     public void start(Stage primaryStage) throws Exception {
-        //primaryStage.setScene(ScreenManager.getInstance().get);
-        primaryStage.setScene(ScreenManager.getInstance().getCadastro());
+        primaryStage.setScene(ScreenManager.getInstance().getLogin());
 		primaryStage.setTitle("Diário Alimentar");
         
         primaryStage.setWidth(850);

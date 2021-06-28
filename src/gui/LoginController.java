@@ -1,5 +1,8 @@
 package gui;
+import java.time.LocalDate;
 
+import beans.Cliente;
+import beans.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,7 +32,9 @@ public class LoginController {
 
     }
     @FXML
-    void initialize() {
+    private void initialize() {
     	
     }
+    
+    
 }

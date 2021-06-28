@@ -17,7 +17,9 @@ public class ScreenManager {
     private PlanoAlimentarController planoAlimentarController;
     */
     private Scene cadastro;
+    private Scene login;
     private CadastroController cadastroController;
+    private LoginController loginController;
     private Stage primaryStage;
     
     public static ScreenManager getInstance() {
@@ -30,10 +32,17 @@ public class ScreenManager {
     private ScreenManager() { 
         this.initialize(); 
     }
-    
+
     private void  initialize() {
     	try {
         	FXMLLoader fxmlLoader = new FXMLLoader();
+        	BorderPane loginPane = fxmlLoader.load(getClass()
+                    .getResource("src/gui/Login.fxml").openStream());  
+        	this.login = new Scene(loginPane);
+        	this.loginController = (LoginController) fxmlLoader.getController();
+
+        	
+        	fxmlLoader = new FXMLLoader();
         	BorderPane cadastroPane = fxmlLoader.load(getClass()
                     .getResource("src/gui/Cadastro.fxml").openStream());  
         	this.cadastro = new Scene(cadastroPane);
@@ -47,11 +56,22 @@ public class ScreenManager {
     	return cadastro;
     }
     
+    public Scene getLogin() {
+    	return login;
+    }
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-
+    
     public void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
+    }
+    
+    public CadastroController getCadastroController() {
+    	return cadastroController;
+    }
+    
+    public LoginController getLoginController() {
+    	return loginController;
     }
 }
