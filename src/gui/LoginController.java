@@ -35,6 +35,14 @@ public class LoginController {
     private void initialize() {
     	
     }
+    @FXML
+    public void btnCadastroClick (ActionEvent e) {
+    	ScreenManager.getInstance().getCadastroController();
+    }
     
-    
+    @FXML
+    public void btnLoginClick (ActionEvent e) {
+    	//for (Usuario u : RepositorioUsuario) {
+    	
+    }
 }

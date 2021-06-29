@@ -1,6 +1,7 @@
+package gui;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
-import gui.ScreenManager;
 
 public class DiarioAlimentarApp extends Application {
 
