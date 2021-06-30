@@ -61,7 +61,6 @@ public class CadastroController {
     @FXML
     private TextField txtCRN;
     
-    private RepositorioUsuario repo = new  RepositorioUsuario();
     
     @FXML
     void initialize() {
@@ -71,21 +70,21 @@ public class CadastroController {
     @FXML
     public void btnConcluirCClick (ActionEvent e) throws ElementoJaExisteException {
     	//add verificao de campos vazios ou nulos
-    	Usuario u = new Cliente(this.txtNomeC.getText(),
+    	Cliente c = new Cliente(this.txtNomeC.getText(),
     			this.txtEmailC.getText(), this.txtSenhaC.getText(),
     			this.dataNascimentoC.getValue(), 
     			Double.parseDouble(this.txtPesoC.getText()),
     			Double.parseDouble(this.txtAlturaC.getText()));
-    	this.repo.create(u);
+    	RepositorioCliente.getInstance().create(c);
     	ScreenManager.getInstance().getLoginController();
     }
     @FXML
     public void btnConcluirNClick (ActionEvent e) throws ElementoJaExisteException {
     	//add verificao de campos vazios ou nulos
-    	Usuario u = new Nutricionista(this.txtNomeN.getText(),
+    	Nutricionista n = new Nutricionista(this.txtNomeN.getText(),
     			this.txtEmailN.getText(), this.txtSenhaN.getText(),
     			this.dataNascimentoN.getValue(), Integer.parseInt(this.txtCRN.getText()));
-    	this.repo.create(u);
+    	RepositorioUsuario.getInstance().create(n);
     	ScreenManager.getInstance().getLoginController();
     }
     @FXML

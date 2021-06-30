@@ -9,6 +9,7 @@ public abstract class Usuario {
 	private String email;
 	private String senha;
 	private LocalDate dataNascimento;
+	private int idUser;
 	
 	public Usuario(String nome, String email,String senha,LocalDate dataNascimento) {
 		super();
@@ -60,7 +61,11 @@ public abstract class Usuario {
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-
+	
+	public int getIdUser() {
+		return this.idUser;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

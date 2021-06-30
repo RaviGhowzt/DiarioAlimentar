@@ -63,12 +63,14 @@ public class DiarioAlimentarController implements Initializable {
 		tcListaCafeDaManha.setCellValueFactory(new PropertyValueFactory<>("nome"));
 		tcListaJanta.setCellValueFactory(new PropertyValueFactory<>("nome"));
 		tcListaLanche.setCellValueFactory(new PropertyValueFactory<>("nome"));
-
+		/*
 		tvCafeDaManha.setItems(ListaDeAlimentos());
 		tvAlmoco.setItems(ListaDeAlimentos());
 		tvJanta.setItems(ListaDeAlimentos());
 		tvLanche.setItems(ListaDeAlimentos());
+		*/
 	}
+	/*
 	private ObservableList<Alimento> ListaDeAlimentos(){
 		return FXCollections.observableArrayList(
 				new Alimento("feijão", 10, 20, 30, 40, 50, 70, 60),
@@ -77,6 +79,6 @@ public class DiarioAlimentarController implements Initializable {
 				new Alimento("maçã", 10, 20, 30, 40, 50, 70, 60),
 				new Alimento("peixe", 10, 20, 30, 40, 50, 70, 60)
 				);
-	}
+	}*/
 	
 }

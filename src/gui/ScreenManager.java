@@ -21,6 +21,11 @@ public class ScreenManager {
     private CadastroController cadastroController;
     private LoginController loginController;
     private Stage primaryStage;
+    private Scene homeNutricionista;
+    private HomeNutricionistaController homeNutricionistaController;
+    private Scene cadastroAlimento;
+    private CadastroAlimentoController cadastroAlimentoController;
+    
     
     public static ScreenManager getInstance() {
         if (instance == null) {
@@ -52,6 +57,14 @@ public class ScreenManager {
     	}
     }
     
+    public Scene getCadastroAlimento() {
+    	return cadastroAlimento;
+    }
+    
+    public Scene gethomeNutricionista() {
+    	return homeNutricionista;
+    }
+    
     public Scene getCadastro(){
     	return cadastro;
     }
@@ -71,7 +84,19 @@ public class ScreenManager {
     	return cadastroController;
     }
     
+    public DiarioAlimentarController getDiarioAlimentarController() {
+    	return diarioAlimentarController;
+    }
+    
     public LoginController getLoginController() {
     	return loginController;
+    }
+    
+    public HomeNutricionistaController getHomeNutricionistaController() {
+    	return homeNutricionistaController;
+    }
+    
+    public CadastroAlimentoController getCadastroAlimentoController() {
+    	return cadastroAlimentoController;
     }
 }
